@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 
 
 // service account
-const serviceAccount = require('./autocar-ab3c5-firebase-adminsdk-4hxk0-1c3bca98ff.json');
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
